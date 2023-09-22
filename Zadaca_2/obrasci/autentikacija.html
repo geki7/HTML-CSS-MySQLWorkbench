@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ivan Gadžić">
+    <meta name="keywords" content="FOI">
+    <meta name="description" content="17.03.2023.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="../css/igadzic.css">
+    <title>Autentikacija</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="../index.html"><img class="opcenito-ikona" src="../materijali/logoelektricni.png" alt="logoelektricni.png"></a>
+            <div class="dropdown">
+              <button class="dropbtn">Izbornik
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="../index.html">Početna</a>
+                <a href="../autor.html">O Autoru</a>
+                <a href="../ostalo/popis.html">Popis</a>
+                <a href="../obrasci/obrazac.html">Obrazac</a>
+                <a href="../ostalo/multimedija.html">Multimedija</a>
+                <a href="../era.html">ERA Model</a>
+                <a href="../navigacijski.html">Navigacijski dijagram</a>
+              </div>
+            </div>
+          </div>
+    </header>
+
+    <section class="sekcija-prijava">
+        <form id="prijava" name="prijava" method="post" action="http://barka.foi.hr/WebDiP/2021/materijali/zadace/ispis_forme.php">
+            <div class="prijava-forma">  
+                <label for="korisnicko_ime">Korisničko ime: </label><br>
+                <input type="text" name="korisnicko_ime" id="korisnicko_ime" maxlength="30" placeholder="Unesite korisničko ime..." autofocus required><br>
+                <label for="lozinka">Lozinka:</label><br>
+                <input type="password" name="lozinka" id="lozinka" maxlength="30" placeholder="Unesite lozinku..." required><br>
+                <label for="da_ne">Zapamti ime: </label><br>
+                <input type="radio" name="zapamti_ime" id="da_ne" value="da"> Da
+                <input type="radio" name="zapamti_ime" id="ne_ne" value="ne" checked>Ne  
+            </div>
+        </form>
+        <div class="prijava-gumbi">
+            <button name="prijavi" id="prijavi" form="prijava" type="submit" value="prijavi">Prijavite se</button>
+            <button name="inicijaliziraj" id="inicijaliziraj" form="prijava" type="reset">Inicijalizirajte</button>
+        </div>
+        <p id="prijava-zaboravljena-lozinka"><a  href="../index.html">Zaboravljena lozinka</a ></p>
+    </section>
+
+    <section class="registracija-section">
+        <form class="registracija-forma" id="registracija" name="registracija" method="get" action="http://barka.foi.hr/WebDiP/2021/materijali/zadace/ispis_forme.php">
+            <div class="registracija-unos">
+                <label for="ime_prezime">Ime i prezime: </label>
+                <input type="text" name="ime_prezime" id="ime_prezime" autofocus="autofocus" placeholder="Unesite ime i prezime..." required>
+            </div>
+            <div class="registracija-unos">
+                <label for="godina_rodenja">Godina rođenja: </label>
+                <input type="date" name="godina_rodenja" id="godina_rodenja" required>
+            </div>
+            <div class="registracija-unos">
+                <label for="email">E-mail: </label>
+                <input type="email" name="email" id="email" placeholder="ldap@foi.hr" required>
+            </div>
+            <div class="registracija-unos">
+                <label for="korisnicko_ime">Korisničko ime:</label>
+                <input type="text" name="korisnicko_ime" id="korisnicko_ime" maxlength="25" placeholder="Unesite korisničko ime..." required>
+            </div>
+            <div class="registracija-unos">
+                <label for="lozinka">Lozinka:</label>
+                <input type="password" name="lozinka" id="lozinka" maxlength="50" placeholder="Unesite lozinku..." required>
+            </div>
+            <div class="registracija-unos">
+                <label for="potvrda_lozinke">Potvrda lozinke:</label>
+                <input type="password" name="potvrda_lozinke" id="potvrda_lozinke" placeholder="Potvrdite lozinku..." maxlength="50" required>
+            </div>
+        </form>
+        <div class="registracija-gumbi">
+            <button name="registriraj" id="registriraj" form="registracija" type="submit" value="registriraj">Registrirajte se</button>
+            <button name="inicijaliziraj" id="inicijaliziraj" form="registracija" type="reset" value="inicijaliziraj">Inicijalizirajte</button>
+        </div>
+    </section>
+    
+    <footer class="podnozje">
+        <p>copyright &copy; <a href="mailto:igadzic@student.foi.hr" target="_blank" rel="noopener noreferrer">Ivan Gadžić</a>, 2023.</p>
+        <a href="http://validator.w3.org/check?uri=http://barka.foi.hr/WebDiP/2022/zadaca_01/igadzic/index.html" target="_blank"><img class="ikonaHTML" src="../materijali/HTML5.png" alt="Validacija.png"></a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2022/zadaca_01/igadzic/css/igadzic.css" target="_blank"><img class="ikonaCSS" src="../materijali/CSS3.png" alt="CSS3Validacija.png"></a>
+    </footer>
+</body>
+</html>

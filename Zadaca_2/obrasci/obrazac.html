@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ivan Gadžić">
+    <meta name="keywords" content="FOI">
+    <meta name="description" content="17.03.2023.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="../css/igadzic.css">
+    <title>Obrazac</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="../index.html"><img class="opcenito-ikona" src="../materijali/logoelektricni.png" alt="logoelektricni.png"></a>
+            <div class="dropdown">
+              <button class="dropbtn">Izbornik
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="../index.html">Početna</a>
+                <a href="../autor.html">O Autoru</a>
+                <a href="../ostalo/popis.html">Popis</a>
+                <a href="../ostalo/multimedija.html">Multimedija</a>
+                <a href="../obrasci/autentikacija.html">Autentikacija</a>
+                <a href="../era.html">ERA Model</a>
+                <a href="../navigacijski.html">Navigacijski dijagram</a>
+              </div>
+            </div>
+          </div>
+    </header>
+    <h1>Obrazac</h1>
+    <section class="obrazac-section">
+        <form class="obrazac-forma-za-upload" method="post" name="obrazac" id="obrazac" action="http://barka.foi.hr/WebDiP/2021/materijali/zadace/ispis_forme.php">
+            <fieldset class="obrazac-grupa-unosa">
+                <legend>Obrazac slanja</legend>
+                <div class="obrazac-unos">
+                    <label for="email">E-mail: </label>
+                    <input type="email" name="email" id="email" value="igadzic@student.foi.hr">
+                </div>
+                <div class="obrazac-unos">
+                    <label for="email">E-mail: </label>
+                    <input type="email" name="email" id="email" placeholder="ldap@foi.hr">
+                </div>
+                <div class="obrazac-unos">
+                    <label for="kategorija">Kategorija</label>
+                    <select name="kategorija" id="kategorija" multiple required>
+                        <option value="value" selected="selected">Poslana</option>
+                        <option value="first" selected="selected">Nacrt</option>
+                        <option value="second">Smeće</option>
+                        <option value="third">Neželjena</option>
+                        <option value="forth">Važno</option>
+                    </select>
+                </div>
+                <div class="obrazac-unos">
+                    <label for="opis">Opis</label>
+                    <textarea name="opis" id="opis" placeholder="Unesite sadržaj..." required></textarea>
+                </div>
+                <div class="obrazac-unos">
+                    <label for="vrijeme_datum_kreiranja">Vrijeme i datum</label>
+                    <input type="datetime-local" name="vrijeme_datum_kreiranja" id="vrijeme_datum_kreiranja" required>
+                </div>
+                <div class="obrazac-unos"> 
+                    <label for="telefon">Broj telefona</label>
+                    <input type="tel" name="telefon" id="telefon" required>
+                </div>
+                <div class="obrazac-unos">
+                    <label for="poveznica">URL</label>
+                    <input type="url" name="poveznica" id="poveznica" required>
+                </div>
+            </fieldset >
+        </section>
+        <button id="obrazac-gumb-za-predaju" type="submit" form="obrazac" value="submit">Upload</button>
+
+    <footer class="podnozje">
+        <p>copyright &copy; <a href="mailto:igadzic@student.foi.hr" target="_blank" rel="noopener noreferrer">Ivan Gadžić</a>, 2023.</p>
+        <a href="http://validator.w3.org/check?uri=http://barka.foi.hr/WebDiP/2022/zadaca_01/igadzic/index.html" target="_blank"><img class="ikonaHTML" src="../materijali/HTML5.png" alt="Validacija.png"></a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2022/zadaca_01/igadzic/css/igadzic.css" target="_blank"><img class="ikonaCSS" src="../materijali/CSS3.png" alt="CSS3Validacija.png"></a>
+    </footer>
+</body>
+</html>
